@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1761417119721,
+      "tag": "0000_overjoyed_black_crow",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1761417175903,
+      "tag": "0001_tearful_susan_delgado",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1761421649525,
+      "tag": "0002_regular_thor_girl",
+      "breakpoints": true
+    }
+  ]
+}

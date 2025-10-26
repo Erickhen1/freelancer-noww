@@ -1,0 +1,35 @@
+{
+  "query": "SHOW CREATE TABLE users",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3tzJbJLZduwEczo.root --database jDmFABkf8rtFcScifBeHxg --execute SHOW CREATE TABLE users",
+  "rows": [
+    {
+      "Table": "users",
+      "Create Table": "CREATE TABLE `users` ("
+    }
+  ],
+  "messages": [
+    "  `id` int(11) NOT NULL AUTO_INCREMENT,",
+    "  `openId` varchar(64) NOT NULL,",
+    "  `name` text DEFAULT NULL,",
+    "  `email` varchar(320) DEFAULT NULL,",
+    "  `loginMethod` varchar(64) DEFAULT NULL,",
+    "  `role` enum('user','admin') NOT NULL DEFAULT 'user',",
+    "  `userType` enum('freelancer','company') NOT NULL DEFAULT 'freelancer',",
+    "  `phone` varchar(20) DEFAULT NULL,",
+    "  `bio` text DEFAULT NULL,",
+    "  `experience` text DEFAULT NULL,",
+    "  `area` varchar(100) DEFAULT NULL,",
+    "  `location` varchar(200) DEFAULT NULL,",
+    "  `profileImage` text DEFAULT NULL,",
+    "  `cpfCnpj` varchar(18) DEFAULT NULL,",
+    "  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,",
+    "  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,",
+    "  `lastSignedIn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,",
+    "  PRIMARY KEY (`id`) /*T![clustered_index] CLUSTERED */,",
+    "  UNIQUE KEY `openId` (`openId`)",
+    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin AUTO_INCREMENT=90001"
+  ],
+  "stdout": "Table\tCreate Table\nusers\tCREATE TABLE `users` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `openId` varchar(64) NOT NULL,\n  `name` text DEFAULT NULL,\n  `email` varchar(320) DEFAULT NULL,\n  `loginMethod` varchar(64) DEFAULT NULL,\n  `role` enum('user','admin') NOT NULL DEFAULT 'user',\n  `userType` enum('freelancer','company') NOT NULL DEFAULT 'freelancer',\n  `phone` varchar(20) DEFAULT NULL,\n  `bio` text DEFAULT NULL,\n  `experience` text DEFAULT NULL,\n  `area` varchar(100) DEFAULT NULL,\n  `location` varchar(200) DEFAULT NULL,\n  `profileImage` text DEFAULT NULL,\n  `cpfCnpj` varchar(18) DEFAULT NULL,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  `lastSignedIn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`) /*T![clustered_index] CLUSTERED */,\n  UNIQUE KEY `openId` (`openId`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin AUTO_INCREMENT=90001\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}
